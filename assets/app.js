@@ -1,3 +1,5 @@
+import {createRoot} from "react-dom/client";
+
 var $ = require('jquery');
 global.$ = global.jQuery = $;
 window.$ = window.jQuery = $
@@ -29,4 +31,4 @@ var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggl
 var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
     return new bootstrap.Popover(popoverTriggerEl)
 })
-ReactDOM.render(<Router><Home /></Router>, document.getElementById('root'));
+createRoot(document.getElementById('root')).render(<Router><Home /></Router>);
